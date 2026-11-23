@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>APEX // NIGHT DRIVE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="experience">
+      <canvas id="drive-canvas" aria-label="Interactive night driving simulation"></canvas>
+      <div class="vignette"></div>
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Apex home"><span>APEX</span><i></i><small>DRIVING SYSTEMS</small></a>
+        <div class="topbar-center"><span class="live-dot"></span> FREE DRIVE <em>•</em> PACIFIC COAST</div>
+        <button class="pause-button" id="pause-button" aria-label="Pause simulation"><span></span><span></span> PAUSE</button>
+      </header>
+
+      <section class="mission-card">
+        <div class="eyebrow">CURRENT RUN <span>01</span></div>
+        <h1>COASTLINE<br />AFTER DARK</h1>
+        <p>Find the horizon. Keep it clean.</p>
+        <div class="progress"><span></span></div>
+        <div class="objective"><b>OBJECTIVE</b><span>Reach Sunset Point</span><strong id="distance">2.4 KM</strong></div>
+      </section>
+
+      <aside class="telemetry">
+        <div class="telemetry-row"><span>TRACTION</span><b id="traction">98%</b></div>
+        <div class="telemetry-row"><span>ROAD TEMP</span><b>18°</b></div>
+        <div class="telemetry-row"><span>WIND</span><b>NW 12</b></div>
+      </aside>
+
+      <section class="speed-cluster" aria-live="polite">
+        <div class="speed"><strong id="speed">000</strong><span>KM/H</span></div>
+        <div class="gear"><span>GEAR</span><b id="gear">N</b></div>
+        <div class="rpm"><span>RPM</span><div class="rpm-bars" id="rpm-bars"></div></div>
+      </section>
+
+      <div class="minimap" aria-label="Route map"><div class="map-road"></div><i class="map-player"></i><span>03:24<br /><small>LOCAL TIME</small></span></div>
+      <div class="controls-hint"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd><span>DRIVE</span><i></i><kbd>SPACE</kbd><span>HANDBRAKE</span></div>
+      <div class="toast" id="toast">ENGINE ONLINE</div>
+      <div class="paused" id="paused"><span>SIMULATION PAUSED</span><small>PRESS ESC OR PAUSE TO CONTINUE</small></div>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
